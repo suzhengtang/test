@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器与服务器之间的数据交互</title>
+    <script>
+        window.onload = function() {
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function() {
+                //1、创建请求对象(ie兼容性处理)
+                var xml;
+                if(window.XMLHttpRequest){
+                    xml = new XMLHttpRequest();
+                }else{
+                    xml = new ActiveXObject("Microsoft XMLHTTP");
+                }
+                //2、发送方式和地址
+                xml.open("get", "www.baidu.com", true);
+                //3、发送
+                xml.send();
+                //4、发送响应
+                xml.onreadystatechange = function() {
+                    if(xml.readyState === 4){
+                        //5、处理结果
+                        if(xml.status >=200 && xml.status <300 || xml.status === 304){
+                            alert("请求成功");
+                        }else{
+                            alert("请求失败");
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<button>发送</button>
+</body>
+</html>
