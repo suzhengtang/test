@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json字符串的转换</title>
+    <script>
+
+        /*
+        eval()该方法可以将标准和非标准的json字符串转换成对象
+        */
+
+        var str2 = '{name: "szt",age: "28",sex: "男"}';
+        var str1 = '{"name": "szt","age": "29","sex": "男"}';
+        var strZhuang = JSON.parse(str2);
+        var strZhuang2 = eval("("+str2+")");
+        var strZhuang1 = JSON.parse(str1);
+        console.log(strZhuang);//报错
+        console.log(strZhuang1);//正确
+        console.log(strZhuang2);//正确
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
