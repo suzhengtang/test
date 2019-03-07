@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie的使用以及封装</title>
+    <script>
+        window.onload = function() {
+            //设置cookie
+            function setCookie(key, value, day, path, domain){
+                //1、获取路径
+                var index = window.location.pathname.lastIndexOf("/");
+                var pa = window.location.pathname.substring(0, index);
+                path = path || pa;
+
+                //2、获取domain
+                domain = domain || window.location.hostname;
+
+                //3、获取时间
+                if(!day){
+                    document.cookie = ""+key+" = "+value+";"
+                }else{
+                    var daye = new Date();
+                    document.cookie = ""+key+"="+value+";expires="+new Date(daye.setDate(daye.getDate() + day))+";path="+path+";domin="+domain+"";
+                }
+            }
+            setCookie("sex", "男");
+            setCookie("test", "hello", 1, "/", "localhost");
+
+            //获取cookie
+            function getCookie(key) {
+                var cookieArr = document.cookie.split(";");
+                for(var i=0; i<cookieArr.length; i++){
+                    if(cookieArr[i].split("=")[0].trim() === key){
+                        return cookieArr[i].split("=")[1];
+                    }
+                }
+            }
+            console.log(getCookie("sex"));
+
+            //删除cookie
+            function delCookie(key, path) {
+                setCookie(key, getCookie(key), -1, path);
+            }
+            console.log(delCookie("sex"));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
