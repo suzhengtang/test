@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0312字符串的运用</title>
+    <script>
+        window.onload = function() {
+            var str = "1.123456";
+            //转化成number类型
+            var numStr = Number(str);
+            console.log(numStr);  //1.123456
+            console.log(typeof numStr);  //number
+
+            //截取2位小数
+            var num2 = parseInt(str*100)/100;
+            var num3 = numStr.toFixed(2);
+            console.log(num2);  //1.12
+            console.log(typeof num2);  //number
+            console.log(num3);  //1.12  number类型才有toFixed()
+
+            var myString = "wo shi ceshi de 文字";
+            //获取某一个具体字符的位置，indexOf()可以用来获取某个字符的位置，注意如果有多个相同的字符，只获取第一个字符的位置
+            var myIndex = myString.indexOf("i");
+            console.log(myIndex); // 5
+            //lastIndexOf()也可以用来获取某个字符的位置，注意如果有多个相同的字符，只获取最后一个字符的位置
+            var myLastIndex = myString.lastIndexOf("i");
+            console.log(myLastIndex); // 11
+            //获取某个位置的对应字符，charAt()
+            var myStr = myString.charAt(5);
+            console.log(myStr);  // i
+            //获取某个位置对应的unicode编码，charCodeAt()
+            var myStrCode = myString.charCodeAt(16);
+            console.log(myStrCode);  //25991  注意：如果获取的unicode编码大于127，那么这个字符就是汉字
+            console.log(myString.length);  //18
+
+            var myString2 = "1245365test";
+            console.log(myString2.slice(2,4));  //45
+            console.log(myString2.slice(2));  //45365test
+            console.log(myString2.substring(2,4));  //45
+            console.log(myString2.substring(4));  //365test
+            console.log(myString2.substr(2,4));  //4536
+            console.log(myString2.substr(4));  //365test
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
