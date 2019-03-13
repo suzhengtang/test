@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js自带的方法</title>
+    <script>
+        // javaScript自带的方法有
+        // unShift()  数组开头增加
+        // push()  数组末尾增加
+        // shift()  数组开头删除一项
+        // pop()  数组末尾删除一项
+        // concat()  数组的拼接
+
+        //splice(index, howmany, item1, ...itemx);
+        //splice 可以根据参数实现数组的删除、增加和替换。前面两个参数index和howmany是必填的参数，后面的可选填
+
+        //splice(index, 0, item1, item2)  增加
+        //从索引index开始增加，增加的内容插到索引index前面
+
+        //splice(index, n)  删除
+        //从索引index开始删除n个，如果只有一个参数index,就是从索引index开始后面的内容全部删除
+
+        //splice(index, n, item1, item2...)  替换
+        //从索引index开始后面替换n个，替换的内容为item1，item2...
+
+        //slice(n, m)  截取
+        //从索引n截取到m，但不包括m，原数组不发生改变
+        //slice(0)和splice() 可以实现数组克隆
+
+        //reverse()  数组翻转
+        //返回值是翻转后的新数组，原数组发生改变
+
+        //sort()  数组排序
+        //使用方法： sort(function(a, b){return a-b})  从小到大排序
+        //           sort(function(a, b){return b-a})  从大到小排序
+
+        //toString()  数组转字符串
+        //把数组转成以逗号分割的字符串
+
+        //join(",")  拼接
+        //把数字以逗号的形式拼接成字符串，配合eval()可以实现数学运算
+        var a = [12,3,4];
+        console.log(a.join(","));  //12,3,4
+        console.log(eval(a.join('+')));  //19
+
+        //indexOf(查找的内容)  查找
+        //查找数组中是否有某项，有的话返回该项的索引，没有返回-1
+
+        //forEach()  遍历  没有返回值
+        //map()  有返回值
+    </script>
+</head>
+<body>
+
+</body>
+</html>
