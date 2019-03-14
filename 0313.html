@@ -5,6 +5,7 @@
     <title>js自带的方法</title>
     <script>
         // javaScript自带的方法有
+        //Array数组
         // unShift()  数组开头增加
         // push()  数组末尾增加
         // shift()  数组开头删除一项
@@ -48,6 +49,30 @@
 
         //forEach()  遍历  没有返回值
         //map()  有返回值
+
+        //string字符串
+        //charAt(index)  通过索引找字符
+        //charCodeAt(index)  通过索引找到字符的unicode编码，返回值是0-65535之间的整数
+        var b = "suzhengtang";
+        console.log(b.charAt(3));  //h
+
+        //indexOf()  从前往后找，找到返回内容的索引，找不到返回-1
+        console.log(b.indexOf("z"))  //2
+        //lastIndexOf()  从后往前找，找到返回内容的索引，找不到返回-1
+        console.log(b.lastIndexOf("n"));  //9
+
+        //slice(n, m)  从索引n查找到索引m，但不包括m，slice可以取负值
+        //substring(n, m)  从索引n查找到索引m，但不包括m，substring不可以取负值
+        //substr(n, m)  从索引n开始截取m个
+        //split（切割形式）  把一个字符串分割成一个字符串数组
+        console.log(b.slice(2,4))  //zh
+        console.log(b.slice(4))  //engtang
+        console.log(b.slice(-2));  //ng
+        console.log(b.substring(0,4));  //suzh
+        console.log(b.substr(2,4));  //zhen
+
+        //toUpperCase()  转大写字母
+        //toLowerCase()  转小写字母
     </script>
 </head>
 <body>
