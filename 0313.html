@@ -40,9 +40,9 @@
 
         //join(",")  拼接
         //把数字以逗号的形式拼接成字符串，配合eval()可以实现数学运算
-        var a = [12,3,4];
-        console.log(a.join(","));  //12,3,4
-        console.log(eval(a.join('+')));  //19
+        // var a = [12,3,4];
+        // console.log(a.join(","));  //12,3,4
+        // console.log(eval(a.join('+')));  //19
 
         //indexOf(查找的内容)  查找
         //查找数组中是否有某项，有的话返回该项的索引，没有返回-1
@@ -53,26 +53,43 @@
         //string字符串
         //charAt(index)  通过索引找字符
         //charCodeAt(index)  通过索引找到字符的unicode编码，返回值是0-65535之间的整数
-        var b = "suzhengtang";
-        console.log(b.charAt(3));  //h
+        // var b = "suzhengtang";
+        // console.log(b.charAt(3));  //h
 
         //indexOf()  从前往后找，找到返回内容的索引，找不到返回-1
-        console.log(b.indexOf("z"))  //2
+        // console.log(b.indexOf("z"))  //2
         //lastIndexOf()  从后往前找，找到返回内容的索引，找不到返回-1
-        console.log(b.lastIndexOf("n"));  //9
+        // console.log(b.lastIndexOf("n"));  //9
 
         //slice(n, m)  从索引n查找到索引m，但不包括m，slice可以取负值
         //substring(n, m)  从索引n查找到索引m，但不包括m，substring不可以取负值
         //substr(n, m)  从索引n开始截取m个
         //split（切割形式）  把一个字符串分割成一个字符串数组
-        console.log(b.slice(2,4))  //zh
-        console.log(b.slice(4))  //engtang
-        console.log(b.slice(-2));  //ng
-        console.log(b.substring(0,4));  //suzh
-        console.log(b.substr(2,4));  //zhen
+        // console.log(b.slice(2,4))  //zh
+        // console.log(b.slice(4))  //engtang
+        // console.log(b.slice(-2));  //ng
+        // console.log(b.substring(0,4));  //suzh
+        // console.log(b.substr(2,4));  //zhen
 
         //toUpperCase()  转大写字母
         //toLowerCase()  转小写字母
+
+        // Math对象
+        // Math.floor()  向下取整
+        // Math.ceil()   向上取整
+        // Math.random()  取0-1之间的随机小数
+        // Math.round()   四舍五入
+        // Math.abs()    取绝对值
+        // Math.max()    取最大值
+        // Math.min()    取最小值
+        var aa = 2.2356;
+        console.log(Math.floor(aa));   // 2
+        console.log(Math.ceil(aa))     // 3
+        console.log(Math.random(aa))     // 0.40702563886055754
+        console.log(Math.round(aa))     // 2
+        console.log(Math.abs(aa))     // 2.2356
+        console.log(Math.max(aa))     // 2.2356
+        console.log(Math.min(aa))     // 2.2356
     </script>
 </head>
 <body>
